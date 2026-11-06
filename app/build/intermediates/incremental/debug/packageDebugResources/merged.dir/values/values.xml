@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="accent_blue">#38BDF8</color>
+    <color name="patience_amber">#F59E0B</color>
+    <color name="patience_green">#10B981</color>
+    <color name="patience_red">#EF4444</color>
+    <color name="primary_navy">#0A0E1A</color>
+    <color name="surface_navy">#131B2E</color>
+    <string name="app_name">AI Teacher</string>
+    <string name="notification_channel_description">Nightly reminders to practice English speaking</string>
+    <string name="notification_channel_id">ai_teacher_daily_reminder</string>
+    <string name="notification_channel_name">AI Teacher Daily Practice</string>
+    <string name="reminder_body">Don\'t make your AI Teacher angry! Complete your 5-minute English session now.</string>
+    <string name="reminder_title">Time for your daily English practice! 🔥</string>
+    <style name="Theme.AITeacher" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:statusBarColor">#0A0E1A</item>
+        <item name="android:navigationBarColor">#0A0E1A</item>
+        <item name="android:windowBackground">#0A0E1A</item>
+    </style>
+</resources>

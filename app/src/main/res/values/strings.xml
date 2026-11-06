@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">AI Teacher</string>
+    <string name="notification_channel_id">ai_teacher_daily_reminder</string>
+    <string name="notification_channel_name">AI Teacher Daily Practice</string>
+    <string name="notification_channel_description">Nightly reminders to practice English speaking</string>
+    <string name="reminder_title">Time for your daily English practice! 🔥</string>
+    <string name="reminder_body">Don\'t make your AI Teacher angry! Complete your 5-minute English session now.</string>
+</resources>

@@ -1,0 +1,15 @@
+R_DEF: Internal format may change without notice
+local
+color accent_blue
+color patience_amber
+color patience_green
+color patience_red
+color primary_navy
+color surface_navy
+string app_name
+string notification_channel_description
+string notification_channel_id
+string notification_channel_name
+string reminder_body
+string reminder_title
+style Theme.AITeacher
