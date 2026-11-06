@@ -7,9 +7,8 @@ import retrofit2.converter.gson.GsonConverterFactory
 import java.util.concurrent.TimeUnit
 
 object RetrofitClient {
-    // 10.0.2.2 routes from the Android emulator to the host machine's localhost.
-    // For a physical phone connected over Wi-Fi, change this to your PC's LAN IP (e.g. "http://192.168.1.100:8000/")
-    var baseUrl: String = "http://10.0.2.2:8000/"
+    // Deployed backend base URL
+    var baseUrl: String = "http://gambzjbzxw3vkwkmuv0qezy9.140.245.6.31.sslip.io/"
         set(value) {
             field = if (!value.endsWith("/")) "$value/" else value
             retrofitInstance = null
