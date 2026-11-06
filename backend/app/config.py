@@ -5,6 +5,8 @@ from pydantic_settings import BaseSettings
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 class Settings(BaseSettings):
+    BASE_DIR: Path = BASE_DIR
+    STATIC_DIR: Path = BASE_DIR / "static"
     GROQ_API_KEY: str = os.getenv("GROQ_API_KEY", "")
     HOST: str = "0.0.0.0"
     PORT: int = 8000
@@ -34,4 +36,5 @@ class Settings(BaseSettings):
 settings = Settings()
 
 # Ensure directories exist
+Path(settings.STATIC_DIR).mkdir(parents=True, exist_ok=True)
 Path(settings.AUDIO_STORAGE_PATH).mkdir(parents=True, exist_ok=True)

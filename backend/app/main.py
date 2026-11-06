@@ -1,9 +1,10 @@
 import logging
+from pathlib import Path
 from contextlib import asynccontextmanager
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
-from app.config import settings
+from app.config import settings, BASE_DIR
 from app.database import init_db
 from app.services.cleanup_service import cleanup_worker
 from app.api.routes import router as api_router
@@ -48,7 +49,9 @@ app.add_middleware(
 )
 
 # Mount static directory for streaming generated TTS audio files
-app.mount("/static", StaticFiles(directory=str(settings.BASE_DIR / "static")), name="static")
+static_dir = getattr(settings, "STATIC_DIR", None) or (getattr(settings, "BASE_DIR", BASE_DIR) / "static")
+Path(static_dir).mkdir(parents=True, exist_ok=True)
+app.mount("/static", StaticFiles(directory=str(static_dir)), name="static")
 
 # Register API routes
 app.include_router(api_router)
